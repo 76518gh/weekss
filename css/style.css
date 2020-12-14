@@ -1,0 +1,68 @@
+@-webkit-keyframes leeho {
+	0%{
+        margin-left: 0;
+	}
+	50%{
+		margin-left: 30px
+	}
+	100%{
+        margin-left: 0px;
+	}
+}
+
+.box{
+width: 60px;
+height: 60px;
+background-color: #56ceee;
+float: left;
+
+animation-name: leeho;
+animation-duration: 10s;
+animation-delay: 10s;
+animation-iteration-count: infinite;
+ transition-property: transform;
+ transition-duration: 1s
+}
+
+.box:hover {
+  background-color: blue;
+  transform: rotate(360deg);
+animation-name: leeho;
+animation-duration: 3s;
+animation-delay: 1s;
+}
+
+.circle {
+ 
+  border-radius: 50%;
+  background-color: deepskyblue;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  opacity: 0;
+}
+
+.circle:hover {
+  
+  border-radius: 50%;
+  background-color: #3F51B5;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  opacity: 0;
+  animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+}
+
+
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
